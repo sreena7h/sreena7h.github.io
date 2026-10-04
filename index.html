@@ -139,7 +139,7 @@ footer p{margin:0;max-width:60ch}
       +(c.links||[]).map(function(l){return '<a class="chip" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>'}).join("")
       +'</div><div class="toast" id="toast" aria-live="polite"></div></header>';
 
-    var figs=[{value:(totalM/12).toFixed(1),label:"years of experience"}].concat(d.highlights||[]);
+    var figs=[{value:(totalM/12).toFixed(1),label:"Years of experience"}].concat(d.highlights||[]);
     h+='<div class="figs">'+figs.map(function(f){return '<div class="fig"><b>'+esc(f.value)+'</b><span>'+esc(f.label)+'</span></div>'}).join("")+'</div>';
 
     h+='<section id="experience"><h2>Experience <span class="label">newest first</span></h2><ol class="log">';
