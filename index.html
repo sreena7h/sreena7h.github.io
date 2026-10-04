@@ -63,6 +63,8 @@ section>h2 .label{font-size:11px}
 .entry::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
 .entry.current::before{background:var(--signal);border-color:var(--signal)}
 .when{font:500 13px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.dur{color:var(--fg)}
+.entry.current .dur{color:var(--signal)}
 .entry h3{font-size:23px;font-weight:700;margin-top:4px;letter-spacing:-.01em}
 .org{font:500 15px/1.4 var(--mono);color:var(--accent);margin-top:2px}
 .about{font-style:italic;color:var(--muted);margin:10px 0 0;max-width:62ch}
@@ -99,7 +101,7 @@ footer p{margin:0;max-width:60ch}
 <header>
   <div class="status"><span class="dot" aria-hidden="true"></span>Bengaluru, India · Senior Software Developer at IBM</div>
   <h1>Sreenath P</h1>
-  <div class="role">Senior Backend Engineer · 8 years</div>
+  <div class="role">Senior Backend Engineer · <span data-exp="2018-08" data-fmt="years">8 years</span></div>
   <p class="lede">I build and lead backend systems for products people depend on: an AI-powered IT operations platform at IBM, an ed-tech platform used for exam prep and job readiness, and a cloud device-management product. I own architecture, lead teams, and work directly with customers to turn early products into paying ones.</p>
   <div class="links">
     <button class="chip primary" id="copy-email" type="button">sreenath.careers@gmail.com</button>
@@ -110,7 +112,7 @@ footer p{margin:0;max-width:60ch}
 </header>
 
 <div class="figs">
-  <div class="fig"><b>8</b><span>years in backend engineering</span></div>
+  <div class="fig"><b data-exp="2018-08" data-fmt="decimal">8.2</b><span>years in backend engineering</span></div>
   <div class="fig"><b>8</b><span>engineers led at IBM</span></div>
   <div class="fig"><b>5</b><span>customer PoCs led</span></div>
   <div class="fig"><b>4</b><span>performance awards</span></div>
@@ -120,7 +122,7 @@ footer p{margin:0;max-width:60ch}
   <h2>Experience <span class="label">newest first</span></h2>
   <ol class="log">
     <li class="entry current">
-      <div class="when">Nov 2024 — Present</div>
+      <div class="when" data-start="2024-11">Nov 2024 — Present</div>
       <h3>Senior Software Developer</h3>
       <div class="org">IBM Software Labs · IBM Concert · Bengaluru</div>
       <p class="about">IBM Concert is an early-stage, AI-powered IT operations platform that unifies visibility, resilience and risk management across hybrid application environments.</p>
@@ -133,7 +135,7 @@ footer p{margin:0;max-width:60ch}
       </ul>
     </li>
     <li class="entry">
-      <div class="when">Nov 2021 — Nov 2024</div>
+      <div class="when" data-start="2021-11" data-end="2024-11">Nov 2021 — Nov 2024</div>
       <h3>Product Engineer</h3>
       <div class="org">Entri Software Pvt. Ltd · Kochi</div>
       <p class="about">Entri is an AI-powered Indian ed-tech and job-readiness platform that helps learners prepare for competitive exams and upskill in their native languages.</p>
@@ -148,12 +150,12 @@ footer p{margin:0;max-width:60ch}
       </ul>
     </li>
     <li class="entry">
-      <div class="when">Aug 2018 — Nov 2021</div>
+      <div class="when" data-start="2018-08" data-end="2021-11">Aug 2018 — Nov 2021</div>
       <h3>Mitsogo Inc. <span class="tag">3 roles</span></h3>
       <div class="org">Hexnode UEM · Kochi</div>
       <p class="about">Mitsogo builds Hexnode UEM, a cloud platform IT admins use to enroll, secure, configure and manage devices from one console.</p>
       <div class="sub">
-        <div class="when">Aug 2021 — Nov 2021</div>
+        <div class="when" data-start="2021-08" data-end="2021-11">Aug 2021 — Nov 2021</div>
         <h4>Senior Software Engineer</h4>
         <ul>
           <li>Built an authentication service using the SCEP protocol.</li>
@@ -162,7 +164,7 @@ footer p{margin:0;max-width:60ch}
         </ul>
       </div>
       <div class="sub">
-        <div class="when">Aug 2019 — Aug 2021</div>
+        <div class="when" data-start="2019-08" data-end="2021-08">Aug 2019 — Aug 2021</div>
         <h4>Software Analyst</h4>
         <ul>
           <li>Product owner for Windows MDM and third-party integrations.</li>
@@ -172,7 +174,7 @@ footer p{margin:0;max-width:60ch}
         </ul>
       </div>
       <div class="sub">
-        <div class="when">Aug 2018 — Aug 2019</div>
+        <div class="when" data-start="2018-08" data-end="2019-08">Aug 2018 — Aug 2019</div>
         <h4>Software Engineer</h4>
         <ul>
           <li>Built MDM features for iOS, Android, Windows and macOS.</li>
@@ -222,6 +224,31 @@ footer p{margin:0;max-width:60ch}
 </div>
 
 <script>
+/* Experience is computed from start dates against today's date, so it stays current with no edits. */
+(function(){
+  var now=new Date(), nowM=now.getFullYear()*12+now.getMonth();
+  function months(start,end){
+    var a=start.split("-"), s=(+a[0])*12+(+a[1]-1), e=nowM;
+    if(end){var b=end.split("-"); e=(+b[0])*12+(+b[1]-1);}
+    return Math.max(e-s,1);
+  }
+  function span(m){
+    var y=Math.floor(m/12), r=m%12, out=[];
+    if(y) out.push(y+(y==1?" yr":" yrs"));
+    if(r) out.push(r+(r==1?" mo":" mos"));
+    return out.join(" ");
+  }
+  document.querySelectorAll("[data-exp]").forEach(function(el){
+    var m=months(el.dataset.exp);
+    el.textContent = el.dataset.fmt==="decimal" ? (m/12).toFixed(1)
+      : Math.floor(m/12)+"+ years";
+  });
+  document.querySelectorAll("[data-start]").forEach(function(el){
+    var d=document.createElement("span");
+    d.className="dur"; d.textContent=" · "+span(months(el.dataset.start, el.dataset.end));
+    el.appendChild(d);
+  });
+})();
 (function(){
   var email="sreenath.careers@gmail.com", toast=document.getElementById("toast");
   function done(msg){toast.textContent=msg;clearTimeout(done.t);done.t=setTimeout(function(){toast.textContent=""},2500)}
