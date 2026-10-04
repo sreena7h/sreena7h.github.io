@@ -1,0 +1,126 @@
+name: Sreenath P
+title: Senior Backend Engineer
+location: Bengaluru, India
+headline_status: Senior Software Developer at IBM
+
+summary: >
+  I build and lead backend systems for products people depend on: an AI-powered
+  IT operations platform at IBM, an ed-tech platform used for exam prep and job
+  readiness, and a cloud device-management product. I own architecture, lead
+  teams, and work directly with customers to turn early products into paying ones.
+
+contact:
+  email: sreenath.careers@gmail.com
+  links:
+    - label: LinkedIn
+      url: https://linkedin.com/in/sreena7h
+    - label: GitHub
+      url: https://github.com/sreena7h
+
+# Highlight numbers under the header. Total years of experience is
+# always shown first and calculated automatically from the experience list.
+highlights:
+  - value: "8"
+    label: engineers led at IBM
+  - value: "5"
+    label: customer PoCs led
+  - value: "4"
+    label: performance awards
+
+# Newest company first. A company can have one or more roles.
+experience:
+  - company: IBM Software Labs
+    product: IBM Concert
+    location: Bengaluru
+    about: >
+      IBM Concert is an early-stage, AI-powered IT operations platform that
+      unifies visibility, resilience and risk management across hybrid
+      application environments.
+    roles:
+      - title: Senior Software Developer
+        start: 2024-11
+        points:
+          - Led a team of 8 engineers through the end-to-end integration of Concert with IBM Power servers.
+          - Enabled vulnerability and certificate management for software running on IBM Power, using AI, automation and orchestration to improve security and reduce downtime.
+          - "Led 5 customer PoCs: converted 1 into a paying customer, with 4 engagements in progress."
+          - Own product architecture, technical design and code reviews.
+          - Drive technical and strategic discussions with client engineering teams, customers and senior leadership.
+
+  - company: Entri Software Pvt. Ltd
+    location: Kochi
+    about: >
+      Entri is an AI-powered Indian ed-tech and job-readiness platform that helps
+      learners prepare for competitive exams and upskill in their native languages.
+    roles:
+      - title: Product Engineer
+        start: 2021-11
+        end: 2024-11
+        points:
+          - Designed an AI feature that assesses users' English language proficiency.
+          - Led a CRM-integrated lead repository for analysis by revenue, date and business category, and built a category-level revenue dashboard.
+          - Was DRI for a data-driven ROI project giving insight across business categories.
+          - Built purchase, payment, tax receipt and subscription flows, and integrated payment gateways and instrumentation tools.
+          - Optimized database performance, cutting server downtime and CPU usage.
+          - Set coding standards and review practices that significantly reduced bug reports.
+          - Handled monitoring, incident response, RCA documentation, infrastructure, tech sessions and hiring.
+
+  - company: Mitsogo Inc.
+    product: Hexnode UEM
+    location: Kochi
+    about: >
+      Mitsogo builds Hexnode UEM, a cloud platform IT admins use to enroll,
+      secure, configure and manage devices from one console.
+    roles:
+      - title: Senior Software Engineer
+        start: 2021-08
+        end: 2021-11
+        points:
+          - Built an authentication service using the SCEP protocol.
+          - Automated device-to-server communication for load testing.
+          - "Product revamp team: hiring, mentoring, code review, estimation and incident response."
+      - title: Software Analyst
+        start: 2019-08
+        end: 2021-08
+        points:
+          - Product owner for Windows MDM and third-party integrations.
+          - Built BitLocker integration, remote view and remote app management, features that helped lead conversion.
+          - Developed a Windows client agent for Active Directory sync.
+          - Reduced customer issues through ownership and weekly review sessions.
+      - title: Software Engineer
+        start: 2018-08
+        end: 2019-08
+        points:
+          - Built MDM features for iOS, Android, Windows and macOS.
+          - Handled customer-reported issues and hotfixes.
+
+skills:
+  Languages & frameworks: [Python, Django, Django REST Framework, FastAPI, REST APIs, Microservices]
+  AI & LLMs: [LLMs, RAG, Generative AI, Prompt engineering, LangChain, LangGraph, Vector databases]
+  Data stores: [PostgreSQL, MySQL, Redis, MongoDB, Elasticsearch]
+  Infrastructure & ops: [AWS, Docker, Kubernetes, Jenkins, CI/CD, Airflow, RabbitMQ, Grafana, Sentry, Linux, Git]
+  Engineering practice: [System design, Product architecture, SOLID, TDD, SDLC, Agile, Code review]
+  Leadership: [Team management, Technical leadership, Ownership, Product thinking, Troubleshooting]
+
+# Newest first. `date` is YYYY-MM.
+awards:
+  - title: Growth Award, best performers of the quarter
+    org: IBM
+    date: 2025-04
+  - title: Best Performer of Engineering
+    org: Entri Software
+    date: 2024-07
+  - title: Best Engineering Project
+    org: Entri Software
+    date: 2024-04
+  - title: Best Performer of Engineering
+    org: Entri Software
+    date: 2023-05
+
+education:
+  - degree: B.Tech, Computer Science and Engineering
+    school: Government Engineering College, Wayanad · Kannur University
+    years: 2014 — 2018
+
+footer_note: >
+  Open to conversations about senior backend, platform and AI engineering roles.
+  Email is the fastest way to reach me.
