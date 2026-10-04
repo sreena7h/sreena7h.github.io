@@ -41,8 +41,6 @@ experience:
     links:
       - label: Product demo video
         url: https://mediacenter.ibm.com/media/1_9ababzg1
-      - label: IBM Concert
-        url: https://www.ibm.com/products/concert
     roles:
       - title: Senior Software Developer
         start: 2024-11
@@ -58,6 +56,9 @@ experience:
     about: >
       Entri is an AI-powered Indian ed-tech and job-readiness platform that helps
       learners prepare for competitive exams and upskill in their native languages.
+    links:
+      - label: entri.app
+        url: https://entri.app
     roles:
       - title: Product Engineer
         start: 2021-11
@@ -77,6 +78,9 @@ experience:
     about: >
       Mitsogo builds Hexnode UEM, a cloud platform IT admins use to enroll,
       secure, configure and manage devices from one console.
+    links:
+      - label: hexnode.com
+        url: https://www.hexnode.com
     roles:
       - title: Senior Software Engineer
         start: 2021-08
