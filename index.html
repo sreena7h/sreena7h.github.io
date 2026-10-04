@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Sreenath P, Senior Backend Engineer at IBM. Experience, skills, awards and contact.">
+<meta name="description" content="Sreenath P, Senior Backend Engineer. Experience, skills, awards and contact.">
 <title>Sreenath P</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,172 +94,122 @@ footer{border-top:1px solid var(--line);padding-top:28px;display:grid;gap:14px}
 footer p{margin:0;max-width:60ch}
 .toast{font:500 13px var(--mono);color:var(--signal);min-height:1.2em}
 @media (prefers-reduced-motion:no-preference){.chip{transition:border-color .15s}}
+
+.state{padding-block:120px;color:var(--muted);font:500 14px/1.6 var(--mono)}
+.state.err{color:var(--fg)}
+.state code{background:var(--surface);border:1px solid var(--line);padding:2px 6px;border-radius:4px}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="status"><span class="dot" aria-hidden="true"></span>Bengaluru, India · Senior Software Developer at IBM</div>
-  <h1>Sreenath P</h1>
-  <div class="role">Senior Backend Engineer · <span data-exp="2018-08" data-fmt="years">8 years</span></div>
-  <p class="lede">I build and lead backend systems for products people depend on: an AI-powered IT operations platform at IBM, an ed-tech platform used for exam prep and job readiness, and a cloud device-management product. I own architecture, lead teams, and work directly with customers to turn early products into paying ones.</p>
-  <div class="links">
-    <button class="chip primary" id="copy-email" type="button">sreenath.careers@gmail.com</button>
-    <a class="chip" href="https://linkedin.com/in/sreena7h" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="chip" href="https://github.com/sreena7h" target="_blank" rel="noopener">GitHub ↗</a>
-  </div>
-  <div class="toast" id="toast" aria-live="polite"></div>
-</header>
-
-<div class="figs">
-  <div class="fig"><b data-exp="2018-08" data-fmt="decimal">8.2</b><span>years in backend engineering</span></div>
-  <div class="fig"><b>8</b><span>engineers led at IBM</span></div>
-  <div class="fig"><b>5</b><span>customer PoCs led</span></div>
-  <div class="fig"><b>4</b><span>performance awards</span></div>
-</div>
-
-<section id="experience">
-  <h2>Experience <span class="label">newest first</span></h2>
-  <ol class="log">
-    <li class="entry current">
-      <div class="when" data-start="2024-11">Nov 2024 — Present</div>
-      <h3>Senior Software Developer</h3>
-      <div class="org">IBM Software Labs · IBM Concert · Bengaluru</div>
-      <p class="about">IBM Concert is an early-stage, AI-powered IT operations platform that unifies visibility, resilience and risk management across hybrid application environments.</p>
-      <ul>
-        <li>Led a team of 8 engineers through the end-to-end integration of Concert with IBM Power servers.</li>
-        <li>Enabled vulnerability and certificate management for software running on IBM Power, using AI, automation and orchestration to improve security and reduce downtime.</li>
-        <li>Led 5 customer PoCs: converted 1 into a paying customer, with 4 engagements in progress.</li>
-        <li>Own product architecture, technical design and code reviews.</li>
-        <li>Drive technical and strategic discussions with client engineering teams, customers and senior leadership.</li>
-      </ul>
-    </li>
-    <li class="entry">
-      <div class="when" data-start="2021-11" data-end="2024-11">Nov 2021 — Nov 2024</div>
-      <h3>Product Engineer</h3>
-      <div class="org">Entri Software Pvt. Ltd · Kochi</div>
-      <p class="about">Entri is an AI-powered Indian ed-tech and job-readiness platform that helps learners prepare for competitive exams and upskill in their native languages.</p>
-      <ul>
-        <li>Designed an AI feature that assesses users' English language proficiency.</li>
-        <li>Led a CRM-integrated lead repository for analysis by revenue, date and business category, and built a category-level revenue dashboard.</li>
-        <li>Was DRI for a data-driven ROI project giving insight across business categories.</li>
-        <li>Built purchase, payment, tax receipt and subscription flows, and integrated payment gateways and instrumentation tools.</li>
-        <li>Optimized database performance, cutting server downtime and CPU usage.</li>
-        <li>Set coding standards and review practices that significantly reduced bug reports.</li>
-        <li>Handled monitoring, incident response, RCA documentation, infrastructure, tech sessions and hiring.</li>
-      </ul>
-    </li>
-    <li class="entry">
-      <div class="when" data-start="2018-08" data-end="2021-11">Aug 2018 — Nov 2021</div>
-      <h3>Mitsogo Inc. <span class="tag">3 roles</span></h3>
-      <div class="org">Hexnode UEM · Kochi</div>
-      <p class="about">Mitsogo builds Hexnode UEM, a cloud platform IT admins use to enroll, secure, configure and manage devices from one console.</p>
-      <div class="sub">
-        <div class="when" data-start="2021-08" data-end="2021-11">Aug 2021 — Nov 2021</div>
-        <h4>Senior Software Engineer</h4>
-        <ul>
-          <li>Built an authentication service using the SCEP protocol.</li>
-          <li>Automated device-to-server communication for load testing.</li>
-          <li>Product revamp team: hiring, mentoring, code review, estimation and incident response.</li>
-        </ul>
-      </div>
-      <div class="sub">
-        <div class="when" data-start="2019-08" data-end="2021-08">Aug 2019 — Aug 2021</div>
-        <h4>Software Analyst</h4>
-        <ul>
-          <li>Product owner for Windows MDM and third-party integrations.</li>
-          <li>Built BitLocker integration, remote view and remote app management, features that helped lead conversion.</li>
-          <li>Developed a Windows client agent for Active Directory sync.</li>
-          <li>Reduced customer issues through ownership and weekly review sessions.</li>
-        </ul>
-      </div>
-      <div class="sub">
-        <div class="when" data-start="2018-08" data-end="2019-08">Aug 2018 — Aug 2019</div>
-        <h4>Software Engineer</h4>
-        <ul>
-          <li>Built MDM features for iOS, Android, Windows and macOS.</li>
-          <li>Handled customer-reported issues and hotfixes.</li>
-        </ul>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div><h3>Languages &amp; frameworks</h3><div class="pills"><span>Python</span><span>Django</span><span>Django REST Framework</span><span>FastAPI</span><span>REST APIs</span><span>Microservices</span></div></div>
-    <div><h3>AI &amp; LLMs</h3><div class="pills"><span>LLMs</span><span>RAG</span><span>Generative AI</span><span>Prompt engineering</span><span>LangChain</span><span>LangGraph</span><span>Vector databases</span></div></div>
-    <div><h3>Data stores</h3><div class="pills"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span><span>MongoDB</span><span>Elasticsearch</span></div></div>
-    <div><h3>Infrastructure &amp; ops</h3><div class="pills"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>CI/CD</span><span>Airflow</span><span>RabbitMQ</span><span>Grafana</span><span>Sentry</span><span>Linux</span><span>Git</span></div></div>
-    <div><h3>Engineering practice</h3><div class="pills"><span>System design</span><span>Product architecture</span><span>SOLID</span><span>TDD</span><span>SDLC</span><span>Agile</span><span>Code review</span></div></div>
-    <div><h3>Leadership</h3><div class="pills"><span>Team management</span><span>Technical leadership</span><span>Ownership</span><span>Product thinking</span><span>Troubleshooting</span></div></div>
-  </div>
-</section>
-
-<section id="awards">
-  <h2>Awards</h2>
-  <div class="rows">
-    <div class="row"><div class="when">Apr 2025</div><div><strong>Growth Award, best performers of the quarter</strong><span>IBM</span></div></div>
-    <div class="row"><div class="when">Jul 2024</div><div><strong>Best Performer of Engineering</strong><span>Entri Software</span></div></div>
-    <div class="row"><div class="when">Apr 2024</div><div><strong>Best Engineering Project</strong><span>Entri Software</span></div></div>
-    <div class="row"><div class="when">May 2023</div><div><strong>Best Performer of Engineering</strong><span>Entri Software</span></div></div>
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="rows">
-    <div class="row"><div class="when">2014 — 2018</div><div><strong>B.Tech, Computer Science and Engineering</strong><span>Government Engineering College, Wayanad · Kannur University</span></div></div>
-  </div>
-</section>
-
-<footer>
-  <span class="label">Get in touch</span>
-  <p>Open to conversations about senior backend, platform and AI engineering roles. Email is the fastest way to reach me.</p>
-  <div class="links">
-    <button class="chip primary" id="copy-email-2" type="button">sreenath.careers@gmail.com</button>
-  </div>
-</footer>
-</div>
+<div class="wrap" id="app"><p class="state">Loading profile…</p></div>
 
 <script>
-/* Experience is computed from start dates against today's date, so it stays current with no edits. */
+/* All content comes from profile.yaml. Durations are computed from today's date. */
 (function(){
+  var app=document.getElementById("app");
   var now=new Date(), nowM=now.getFullYear()*12+now.getMonth();
-  function months(start,end){
-    var a=start.split("-"), s=(+a[0])*12+(+a[1]-1), e=nowM;
-    if(end){var b=end.split("-"); e=(+b[0])*12+(+b[1]-1);}
-    return Math.max(e-s,1);
+  var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function esc(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  function ym(s){var a=String(s).split("-");return (+a[0])*12+(+a[1]-1)}
+  function label(s){var a=String(s).split("-");return MON[+a[1]-1]+" "+a[0]}
+  function span(m){var y=Math.floor(m/12),r=m%12,o=[];if(y)o.push(y+(y==1?" yr":" yrs"));if(r)o.push(r+(r==1?" mo":" mos"));return o.join(" ")||"1 mo"}
+  function months(start,end){return Math.max((end?ym(end):nowM)-ym(start),1)}
+  function range(start,end){return label(start)+" — "+(end?label(end):"Present")}
+  function when(start,end){return '<div class="when">'+esc(range(start,end))+'<span class="dur"> · '+span(months(start,end))+'</span></div>'}
+  function list(points){return points&&points.length?"<ul>"+points.map(function(p){return"<li>"+esc(p)+"</li>"}).join("")+"</ul>":""}
+
+  function render(d){
+    var exp=d.experience||[], roles=[];
+    exp.forEach(function(c){(c.roles||[]).forEach(function(r){roles.push(r)})});
+    var first=Math.min.apply(null,roles.map(function(r){return ym(r.start)}));
+    var hasCurrent=roles.some(function(r){return !r.end});
+    var last=hasCurrent?nowM:Math.max.apply(null,roles.map(function(r){return ym(r.end)}));
+    var totalM=Math.max(last-first,1), years=Math.floor(totalM/12);
+    var c=d.contact||{};
+    var emailBtn=function(id){return c.email?'<button class="chip primary" id="'+id+'" type="button">'+esc(c.email)+'</button>':""};
+
+    var h='<header>'
+      +'<div class="status"><span class="dot" aria-hidden="true"></span>'+esc([d.location,d.headline_status].filter(Boolean).join(" · "))+'</div>'
+      +'<h1>'+esc(d.name)+'</h1>'
+      +'<div class="role">'+esc(d.title)+' · '+years+'+ years</div>'
+      +(d.summary?'<p class="lede">'+esc(d.summary)+'</p>':"")
+      +'<div class="links">'+emailBtn("copy-email")
+      +(c.links||[]).map(function(l){return '<a class="chip" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>'}).join("")
+      +'</div><div class="toast" id="toast" aria-live="polite"></div></header>';
+
+    var figs=[{value:(totalM/12).toFixed(1),label:"years of experience"}].concat(d.highlights||[]);
+    h+='<div class="figs">'+figs.map(function(f){return '<div class="fig"><b>'+esc(f.value)+'</b><span>'+esc(f.label)+'</span></div>'}).join("")+'</div>';
+
+    h+='<section id="experience"><h2>Experience <span class="label">newest first</span></h2><ol class="log">';
+    exp.forEach(function(co){
+      var rs=co.roles||[], current=rs.some(function(r){return !r.end});
+      var org=[co.company,co.product,co.location].filter(Boolean).join(" · ");
+      h+='<li class="entry'+(current?" current":"")+'">';
+      if(rs.length===1){
+        var r=rs[0];
+        h+=when(r.start,r.end)+'<h3>'+esc(r.title)+'</h3><div class="org">'+esc(org)+'</div>'
+          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")+list(r.points);
+      }else{
+        var s=rs.reduce(function(a,r){return ym(r.start)<ym(a)?r.start:a},rs[0].start);
+        var e=current?null:rs.reduce(function(a,r){return ym(r.end)>ym(a)?r.end:a},rs[0].end);
+        h+=when(s,e)+'<h3>'+esc(co.company)+' <span class="tag">'+rs.length+' roles</span></h3>'
+          +'<div class="org">'+esc([co.product,co.location].filter(Boolean).join(" · "))+'</div>'
+          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")
+          +rs.map(function(r){return '<div class="sub">'+when(r.start,r.end)+'<h4>'+esc(r.title)+'</h4>'+list(r.points)+'</div>'}).join("");
+      }
+      h+='</li>';
+    });
+    h+='</ol></section>';
+
+    if(d.skills){
+      h+='<section id="skills"><h2>Skills</h2><div class="skills">'
+        +Object.keys(d.skills).map(function(k){return '<div><h3>'+esc(k)+'</h3><div class="pills">'+(d.skills[k]||[]).map(function(s){return"<span>"+esc(s)+"</span>"}).join("")+'</div></div>'}).join("")
+        +'</div></section>';
+    }
+    if(d.awards&&d.awards.length){
+      h+='<section id="awards"><h2>Awards</h2><div class="rows">'
+        +d.awards.map(function(a){return '<div class="row"><div class="when">'+esc(label(a.date))+'</div><div><strong>'+esc(a.title)+'</strong><span>'+esc(a.org)+'</span></div></div>'}).join("")
+        +'</div></section>';
+    }
+    if(d.education&&d.education.length){
+      h+='<section id="education"><h2>Education</h2><div class="rows">'
+        +d.education.map(function(e){return '<div class="row"><div class="when">'+esc(e.years)+'</div><div><strong>'+esc(e.degree)+'</strong><span>'+esc(e.school)+'</span></div></div>'}).join("")
+        +'</div></section>';
+    }
+    h+='<footer><span class="label">Get in touch</span>'+(d.footer_note?'<p>'+esc(d.footer_note)+'</p>':"")
+      +'<div class="links">'+emailBtn("copy-email-2")+'</div></footer>';
+
+    app.innerHTML=h;
+    if(d.name) document.title=d.name;
+    wireCopy(c.email);
   }
-  function span(m){
-    var y=Math.floor(m/12), r=m%12, out=[];
-    if(y) out.push(y+(y==1?" yr":" yrs"));
-    if(r) out.push(r+(r==1?" mo":" mos"));
-    return out.join(" ");
+
+  function wireCopy(email){
+    var toast=document.getElementById("toast");
+    function done(m){toast.textContent=m;clearTimeout(done.t);done.t=setTimeout(function(){toast.textContent=""},2500)}
+    function sel(b){var r=document.createRange();r.selectNodeContents(b);var s=getSelection();s.removeAllRanges();s.addRange(r);done("Email selected, press Ctrl+C to copy")}
+    ["copy-email","copy-email-2"].forEach(function(id){
+      var b=document.getElementById(id); if(!b) return;
+      b.addEventListener("click",function(){
+        try{navigator.clipboard.writeText(email).then(function(){done("Email copied")},function(){sel(b)})}catch(e){sel(b)}
+      });
+    });
   }
-  document.querySelectorAll("[data-exp]").forEach(function(el){
-    var m=months(el.dataset.exp);
-    el.textContent = el.dataset.fmt==="decimal" ? (m/12).toFixed(1)
-      : Math.floor(m/12)+"+ years";
-  });
-  document.querySelectorAll("[data-start]").forEach(function(el){
-    var d=document.createElement("span");
-    d.className="dur"; d.textContent=" · "+span(months(el.dataset.start, el.dataset.end));
-    el.appendChild(d);
-  });
-})();
-(function(){
-  var email="sreenath.careers@gmail.com", toast=document.getElementById("toast");
-  function done(msg){toast.textContent=msg;clearTimeout(done.t);done.t=setTimeout(function(){toast.textContent=""},2500)}
-  function copy(e){
-    var btn=e.currentTarget;
-    try{
-      navigator.clipboard.writeText(email).then(function(){done("Email copied")},function(){sel(btn)});
-    }catch(err){sel(btn)}
+
+  function fail(msg){
+    app.innerHTML='<p class="state err">The page could not load <code>profile.yaml</code>.<br>'+esc(msg)+'</p>';
   }
-  function sel(btn){var r=document.createRange();r.selectNodeContents(btn);var s=getSelection();s.removeAllRanges();s.addRange(r);done("Email selected, press Ctrl+C to copy")}
-  ["copy-email","copy-email-2"].forEach(function(id){document.getElementById(id).addEventListener("click",copy)});
+
+  fetch("profile.yaml",{cache:"no-cache"})
+    .then(function(r){if(!r.ok) throw new Error("File not found (HTTP "+r.status+"). Keep profile.yaml next to index.html."); return r.text()})
+    .then(function(t){
+      var d;
+      try{d=jsyaml.load(t)}catch(e){throw new Error("There is a formatting mistake in profile.yaml: "+e.message)}
+      render(d);
+    })
+    .catch(function(e){fail(e.message)});
 })();
 </script>
 </body>
