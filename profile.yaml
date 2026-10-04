@@ -20,12 +20,10 @@ contact:
 # Highlight numbers under the header. Total years of experience is
 # always shown first and calculated automatically from the experience list.
 highlights:
-  - value: "8"
-    label: engineers led at IBM
-  - value: "5"
-    label: customer PoCs led
+  - value: "10+"
+    label: Customer PoCs led
   - value: "4"
-    label: performance awards
+    label: Performance awards
 
 # Newest company first. A company can have one or more roles.
 experience:
