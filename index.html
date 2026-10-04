@@ -95,6 +95,9 @@ footer p{margin:0;max-width:60ch}
 .toast{font:500 13px var(--mono);color:var(--signal);min-height:1.2em}
 @media (prefers-reduced-motion:no-preference){.chip{transition:border-color .15s}}
 
+.work{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.work a{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--mono);padding:9px 12px;border-radius:6px;background:var(--accent-soft);color:var(--accent);text-decoration:none}
+.work a:hover{text-decoration:underline}
 .state{padding-block:120px;color:var(--muted);font:500 14px/1.6 var(--mono)}
 .state.err{color:var(--fg)}
 .state code{background:var(--surface);border:1px solid var(--line);padding:2px 6px;border-radius:4px}
@@ -118,6 +121,7 @@ footer p{margin:0;max-width:60ch}
   function months(start,end){return Math.max((end?ym(end):nowM)-ym(start),1)}
   function range(start,end){return label(start)+" — "+(end?label(end):"Present")}
   function when(start,end){return '<div class="when">'+esc(range(start,end))+'<span class="dur"> · '+span(months(start,end))+'</span></div>'}
+  function links(ls){return ls&&ls.length?'<div class="work">'+ls.filter(function(l){return /^https?:\/\//.test(l.url||"")}).map(function(l){return '<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label||l.url)+' ↗</a>'}).join("")+'</div>':""}
   function list(points){return points&&points.length?"<ul>"+points.map(function(p){return"<li>"+esc(p)+"</li>"}).join("")+"</ul>":""}
 
   function render(d){
@@ -139,7 +143,7 @@ footer p{margin:0;max-width:60ch}
       +(c.links||[]).map(function(l){return '<a class="chip" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+' ↗</a>'}).join("")
       +'</div><div class="toast" id="toast" aria-live="polite"></div></header>';
 
-    var figs=[{value:(totalM/12).toFixed(1),label:"Years of experience"}].concat(d.highlights||[]);
+    var figs=[{value:(totalM/12).toFixed(1),label:"years of experience"}].concat(d.highlights||[]);
     h+='<div class="figs">'+figs.map(function(f){return '<div class="fig"><b>'+esc(f.value)+'</b><span>'+esc(f.label)+'</span></div>'}).join("")+'</div>';
 
     h+='<section id="experience"><h2>Experience <span class="label">newest first</span></h2><ol class="log">';
@@ -150,14 +154,14 @@ footer p{margin:0;max-width:60ch}
       if(rs.length===1){
         var r=rs[0];
         h+=when(r.start,r.end)+'<h3>'+esc(r.title)+'</h3><div class="org">'+esc(org)+'</div>'
-          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")+list(r.points);
+          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")+list(r.points)+links((co.links||[]).concat(r.links||[]));
       }else{
         var s=rs.reduce(function(a,r){return ym(r.start)<ym(a)?r.start:a},rs[0].start);
         var e=current?null:rs.reduce(function(a,r){return ym(r.end)>ym(a)?r.end:a},rs[0].end);
         h+=when(s,e)+'<h3>'+esc(co.company)+' <span class="tag">'+rs.length+' roles</span></h3>'
           +'<div class="org">'+esc([co.product,co.location].filter(Boolean).join(" · "))+'</div>'
-          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")
-          +rs.map(function(r){return '<div class="sub">'+when(r.start,r.end)+'<h4>'+esc(r.title)+'</h4>'+list(r.points)+'</div>'}).join("");
+          +(co.about?'<p class="about">'+esc(co.about)+'</p>':"")+links(co.links)
+          +rs.map(function(r){return '<div class="sub">'+when(r.start,r.end)+'<h4>'+esc(r.title)+'</h4>'+list(r.points)+links(r.links)+'</div>'}).join("");
       }
       h+='</li>';
     });
