@@ -1,5 +1,5 @@
 name: Sreenath P
-title: Tech Lead
+title: Senior Backend Engineer
 location: Bengaluru, India
 headline_status: Senior Software Developer at IBM
 
@@ -20,12 +20,15 @@ contact:
 # Highlight numbers under the header. Total years of experience is
 # always shown first and calculated automatically from the experience list.
 highlights:
-  - value: "10+"
-    label: Customer PoCs led
+  - value: "8"
+    label: engineers led at IBM
+  - value: "5"
+    label: customer PoCs led
   - value: "4"
-    label: Performance awards
+    label: performance awards
 
 # Newest company first. A company can have one or more roles.
+# Each company (or each role) can have an optional `links:` list of {label, url}.
 experience:
   - company: IBM Software Labs
     product: IBM Concert
@@ -34,6 +37,12 @@ experience:
       IBM Concert is an early-stage, AI-powered IT operations platform that
       unifies visibility, resilience and risk management across hybrid
       application environments.
+    # Optional. Public links only: demos, product pages, talks, blog posts.
+    links:
+      - label: Product demo video
+        url: https://mediacenter.ibm.com/media/1_9ababzg1
+      - label: IBM Concert
+        url: https://www.ibm.com/products/concert
     roles:
       - title: Senior Software Developer
         start: 2024-11
