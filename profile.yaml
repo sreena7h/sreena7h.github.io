@@ -104,6 +104,33 @@ experience:
           - Built MDM features for iOS, Android, Windows and macOS.
           - Handled customer-reported issues and hotfixes.
 
+# Industries and problem areas you've worked in. `where` and `note` are optional.
+domains:
+  - name: AIOps & IT operations
+    where: IBM
+    note: AI-driven visibility, resilience and risk across hybrid applications
+  - name: Vulnerability & certificate management
+    where: IBM
+    note: Finding and fixing security risk in software running on IBM Power
+  - name: Enterprise infrastructure
+    where: IBM
+    note: Integrating with IBM Power servers
+  - name: Ed-tech
+    where: Entri
+    note: Exam prep and job-readiness learning in native languages
+  - name: Payments & subscriptions
+    where: Entri
+    note: Purchase flows, payment gateways, tax receipts, recurring plans
+  - name: Revenue analytics & CRM
+    where: Entri
+    note: Lead repository, ROI insight and revenue dashboards
+  - name: Unified endpoint management
+    where: Hexnode
+    note: Enrolling, configuring and managing iOS, Android, Windows and macOS devices
+  - name: Identity & device security
+    where: Hexnode
+    note: SCEP authentication, BitLocker, Active Directory sync
+
 skills:
   Languages & frameworks: [Python, Django, Django REST Framework, FastAPI, REST APIs, Microservices]
   AI & LLMs: [LLMs, RAG, Generative AI, Prompt engineering, LangChain, LangGraph, Vector databases]
